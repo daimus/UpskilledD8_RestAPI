@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "a4391a61-467f-424e-99cc-b1e2dd0ac5ce",
+		"name": "Newsapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5302683"
+	},
+	"item": [
+		{
+			"name": "Get News By Keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/everything?q=pemilu",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "pemilu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News By Domain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/everything?domains=viva.co.id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"everything"
+					],
+					"query": [
+						{
+							"key": "domains",
+							"value": "viva.co.id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News By Date Range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/everything?from=2023-01-01&to=2023-01-10&q=new year",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"everything"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "to",
+							"value": "2023-01-10"
+						},
+						{
+							"key": "q",
+							"value": "new year"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Headlines By Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/top-headlines?country=id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"top-headlines"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Headlines By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/top-headlines?category=health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"top-headlines"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "health"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-Api-Key",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{api_key}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://newsapi.org/v2",
+			"type": "string"
+		},
+		{
+			"key": "api_key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
